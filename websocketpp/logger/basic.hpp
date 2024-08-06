@@ -92,7 +92,7 @@ public:
     
 #ifdef _WEBSOCKETPP_DEFAULT_DELETE_FUNCTIONS_
     // no copy assignment operator because of const member variables
-    basic(basic<concurrency,names> const &) = delete;
+    basic<concurrency,names> & operator=(basic<concurrency,names> const &) = delete;
 #endif // _WEBSOCKETPP_DEFAULT_DELETE_FUNCTIONS_
 
 #ifdef _WEBSOCKETPP_MOVE_SEMANTICS_
@@ -105,7 +105,7 @@ public:
 
 #ifdef _WEBSOCKETPP_DEFAULT_DELETE_FUNCTIONS_
     // no move assignment operator because of const member variables
-    basic(basic<concurrency,names> &&) = delete;
+    basic<concurrency,names> & operator=(basic<concurrency,names> &&) = delete;
 #endif // _WEBSOCKETPP_DEFAULT_DELETE_FUNCTIONS_
 
 #endif // _WEBSOCKETPP_MOVE_SEMANTICS_
